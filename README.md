@@ -105,7 +105,8 @@ Boxplot เพื่อตรวจสอบ outliers
 วิเคราะห์ความสัมพันธ์ของตัวแปรเชิงตัวเลขด้วย Correlation Matrix
 
 
-แสดงผลด้วย Heatmap
+แสดงผลด้วย Heatmap  จำนวนลูกค้าในแต่ละกลุ่ม Customer
+
 <img width="855" height="447" alt="{EDAD1F67-2F1C-4635-A0FE-B46BFE1EFBF5}" src="https://github.com/user-attachments/assets/92c81b7a-9030-426c-b8d9-d9cd20f092c4" />
 
 การแสดงยอดการ Churn แยกตามปี
