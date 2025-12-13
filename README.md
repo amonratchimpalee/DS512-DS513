@@ -147,5 +147,8 @@ Mean (Active) ≈ 796.7
 Mean (Inactive) ≈ 805.0
 
 
+**สรุปผล fail to reject the hypothesis**
+
 p-value = 0.43 (> 0.05)
+
 
