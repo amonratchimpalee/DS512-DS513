@@ -30,6 +30,7 @@
 
 
 **จำนวนตัวแปร: 20 ตัวแปร**
+<img width="1171" height="605" alt="image" src="https://github.com/user-attachments/assets/88460a82-6148-4d8f-9db3-4a4a35cf1199" />
 
 
 
