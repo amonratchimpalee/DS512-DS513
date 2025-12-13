@@ -60,6 +60,7 @@ FoodPanda: วิเคราะห์ข้อมูลลูกค้า, Chur
 
 
 จัดการ Missing
+
 จัดการค่า Null
 ลบ duplicates
 แปลงประเภทข้อมูล (date → datetime, string → numeric)
