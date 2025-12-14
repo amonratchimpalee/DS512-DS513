@@ -89,30 +89,21 @@ Encoded categorical and demographic variables
 Final validation to ensure EDA- and ML-ready data
 
 **Analysis**
+
 <img width="480" height="283" alt="image" src="https://github.com/user-attachments/assets/0004ce0c-7f25-47be-bebb-4264460933a1" />
 
-Customer behavior shows high variability, particularly in price, price per item, loyalty points, and days since last order, indicating a heterogeneous customer base that cannot be effectively explained by a single average.
+- Customer heterogeneity and skewed revenue distributions make average-based analysis insufficient for decision-making.
+- Behavioral signals (recency, frequency, engagement) emerge as early indicators of churn, outperforming price and rating variables.
+- The analysis must shift from descriptive patterns to individual churn risk estimation.
+- A predictive churn model is required to detect behavioral decline before customers leave.
+- Integrating churn risk with Customer Lifetime Value (CLV) enables prioritization of value-destructive churn rather than churn volume alone.
 
-Revenue-related variables (price, price per item) exhibit right-skewed distributions with many outliers, suggesting that a small proportion of customers generates a disproportionately large share of revenue (80/20 pattern).
-
-Order frequency has a low median, indicating that most customers do not purchase regularly.
-
-Days since last order is widely distributed with a relatively high median, reflecting an overall high churn risk.
-
-Loyalty points show high variance, highlighting clear differences in customer engagement and loyalty levels.
-
-Ratings are highly concentrated with low variance, suggesting limited explanatory and predictive power for churn compared to behavioral variables
+Next Step 
+- RFM analysis is the necessary next step to convert exploratory behavioral insights into structured, business-interpretable customer segments.
 
 
 
-
-
-
-
-
-
-
-
+Combining churn risk with CLV to prioritize targeted CRM and retention actions.
 **FoodPanda: วิเคราะห์ข้อมูลลูกค้า, Churn และการทำนายด้วย Machine Learning
 โปรเจกต์นี้เป็นงาน Exploratory Data Analysis (EDA) + Statistical Testing + Machine Learning
  โดยใช้ข้อมูลแพลตฟอร์ม Food Delivery (FoodPanda-like dataset) เพื่อศึกษาพฤติกรรมลูกค้า
