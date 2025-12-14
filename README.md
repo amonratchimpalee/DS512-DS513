@@ -107,6 +107,8 @@ Boxplot เพื่อตรวจสอบ outliers
 แสดงผลด้วย Heatmap  จำนวนลูกค้าในแต่ละกลุ่ม Customer
 
 <img width="855" height="447" alt="{EDAD1F67-2F1C-4635-A0FE-B46BFE1EFBF5}" src="https://github.com/user-attachments/assets/92c81b7a-9030-426c-b8d9-d9cd20f092c4" />
+<img width="390" height="355" alt="image" src="https://github.com/user-attachments/assets/4df5063f-cc93-4943-91e1-bee539f2bd2a" />
+
 
 การแสดงยอดการ Churn แยกตามปี
 
