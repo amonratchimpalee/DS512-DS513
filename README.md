@@ -4,6 +4,7 @@ Food Panda Data Set from Pakistan
 Link : https://www.kaggle.com/datasets/nabihazahid/foodpanda-analysis-dataset-2025
 
 The Detail
+
 This dataset contains customer-level transactional and behavioral data from a food delivery platform.Each record represents one customer, summarized from their historical order activity.
 
 This Data Captures
