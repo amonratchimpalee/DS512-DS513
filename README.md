@@ -1,5 +1,6 @@
-##The Detail
-Food Panda Data Set 
+**The Detail**
+
+Food Panda Data Set from Pakistan
 Link : https://www.kaggle.com/datasets/nabihazahid/foodpanda-analysis-dataset-2025
 
 The Detail
@@ -13,11 +14,29 @@ This Data Captures
 
 The target variable, churn_flag, indicates whether a customer has become inactive. This dataset is used to analyze customer behavior, identify churn drivers, and build predictive churn models.
 
-##Executive Summary
+**Executive Summary**
 
 The analysis identifies customer churn driven primarily by declining engagement rather than pricing. Exploratory Data Analysis shows that Recency and Frequency are the strongest indicators of churn, while price per order has minimal impact. A Logistic Regression model is applied to predict churn, achieving high recall and effectively identifying at-risk customers. The outcome is a data-driven early warning system, integrating RFM analysis with predictive modeling, enabling prioritized retention actions and more sustainable churn reduction.
 
-EDA 
+
+**The Purpose**
+
+Key Objectives
+
+- Analyze behavioral patterns of churned Foodpanda customers to uncover the true drivers of disengagement beyond price
+- Identify and validate key churn drivers through exploratory data analysis to understand who the core customers are and why they leave
+- Develop a churn prediction model (≥75% accuracy) to enable early identification of high-risk customers
+
+What This Project Delivers
+
+- Clear identification of behavioral churn signals (e.g., recency and frequency decline)
+- A predictive early warning system to flag customers before they churn
+- Customer segmentation combining churn risk and customer value (CLV)
+- Actionable insights that guide who to retain, when to act, and how to personalize engagement
+
+Value Proposition 
+
+These insights enable the business to act earlier, target smarter, and grow revenue sustainably through data-driven customer decisions.
 
 
 **FoodPanda: วิเคราะห์ข้อมูลลูกค้า, Churn และการทำนายด้วย Machine Learning
