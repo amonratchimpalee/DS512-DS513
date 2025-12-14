@@ -43,6 +43,14 @@ Data Dictionary
 <img width="529" height="530" alt="image" src="https://github.com/user-attachments/assets/2b07be73-beff-4fbb-8c3e-91d7c7783b34" />
 Link https://docs.google.com/spreadsheets/d/1srnmpO-yM5rV1-iT0rWhTP16h0Qvr0ruV2nE_0aN3jc/edit?usp=sharing
 
+The questions 
+<img width="719" height="270" alt="image" src="https://github.com/user-attachments/assets/21e0ccb9-8d29-40e4-9e35-79a93662b0ab" />
+
+**Exploratory Data Analysis**
+<img width="833" height="434" alt="image" src="https://github.com/user-attachments/assets/4e605035-1046-4f5b-bc12-848ca795fc09" />
+(The above visualization is selected for this topic analysis)
+Key Findings
+
 
 
 
