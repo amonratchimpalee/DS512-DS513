@@ -16,7 +16,7 @@ The target variable, churn_flag, indicates whether a customer has become inactiv
 
 **Executive Summary**
 
-The analysis identifies customer churn driven primarily by declining engagement rather than pricing. Exploratory Data Analysis shows that Recency and Frequency are the strongest indicators of churn, while price per order has minimal impact. A Logistic Regression model is applied to predict churn, achieving high recall and effectively identifying at-risk customers. The outcome is a data-driven early warning system, integrating RFM analysis with predictive modeling, enabling prioritized retention actions and more sustainable churn reduction.
+The analysis identifies customer churn driven primarily by declining engagement rather than pricing. Exploratory Data Analysis shows that Recency and Frequency are the strongest indicators of churn, while price per order has minimal impact.The outcome is a data-driven early warning system, integrating RFM analysis with predictive modeling, enabling prioritized retention actions and more sustainable churn reduction.
 
 
 **The Purpose**
@@ -95,7 +95,6 @@ Final validation to ensure EDA- and ML-ready data
 - Customer heterogeneity and skewed revenue distributions make average-based analysis insufficient for decision-making.
 - Behavioral signals (recency, frequency, engagement) emerge as early indicators of churn, outperforming price and rating variables.
 - The analysis must shift from descriptive patterns to individual churn risk estimation.
-- A predictive churn model is required to detect behavioral decline before customers leave.
 - Integrating churn risk with Customer Lifetime Value (CLV) enables prioritization of value-destructive churn rather than churn volume alone.
 
 Next Step 
@@ -103,7 +102,8 @@ Next Step
 
 
 
-Combining churn risk with CLV to prioritize targeted CRM and retention actions.
+
+
 **FoodPanda: วิเคราะห์ข้อมูลลูกค้า, Churn และการทำนายด้วย Machine Learning
 โปรเจกต์นี้เป็นงาน Exploratory Data Analysis (EDA) + Statistical Testing + Machine Learning
  โดยใช้ข้อมูลแพลตฟอร์ม Food Delivery (FoodPanda-like dataset) เพื่อศึกษาพฤติกรรมลูกค้า
