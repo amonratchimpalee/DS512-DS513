@@ -39,17 +39,75 @@ Value Proposition
 These insights enable the business to act earlier, target smarter, and grow revenue sustainably through data-driven customer decisions.
 
 
-Data Dictionary 
+**Data Dictionary**
+
 <img width="529" height="530" alt="image" src="https://github.com/user-attachments/assets/2b07be73-beff-4fbb-8c3e-91d7c7783b34" />
+
 Link https://docs.google.com/spreadsheets/d/1srnmpO-yM5rV1-iT0rWhTP16h0Qvr0ruV2nE_0aN3jc/edit?usp=sharing
 
-The questions 
+**The questions** 
+
 <img width="719" height="270" alt="image" src="https://github.com/user-attachments/assets/21e0ccb9-8d29-40e4-9e35-79a93662b0ab" />
 
 **Exploratory Data Analysis**
 <img width="833" height="434" alt="image" src="https://github.com/user-attachments/assets/4e605035-1046-4f5b-bc12-848ca795fc09" />
+
 (The above visualization is selected for this topic analysis)
-Key Findings
+
+**Key Findings**
+
+- **High Churn Risk**: Churn rate is as high as 46%, indicating that nearly half of customers leave the platform, directly impacting revenue and business stability.
+- **Loss of High-Value Customers**: Churned customers have a higher AOV than active customers (805 vs 797), showing that the business is losing high-value (VIP) customers, not low-quality ones.
+- **Weakening Key Revenue Markets**: High-income cities such as Multan and Lahore experience churn rates above 47%, signaling revenue risk in strategic geographic markets.
+- **Behavioral Decline Before Churn**: Churned customers exhibit lower purchase frequency, higher days since last order, and longer tenure, confirming that churn is preceded by a gradual decline in engagement rather than sudden exit.
+
+**Hypothesis:**
+
+H₀ (Null Hypothesis):
+Customer churn rate has no significant relationship with the business’s total revenue.
+
+H₁ (Alternative Hypothesis):
+Customer churn rate has a significant relationship with the business’s total revenue,
+such that an increase in churn leads to a decrease in total revenue.
+
+**Cleaning Data**
+
+1. Data Quality & Integrity
+Assessed completeness, logical consistency, and duplicates
+Identified critical issues affecting churn and revenue analysis
+2. Temporal & Behavioral Validation
+Corrected date inconsistencies and invalid order sequences
+Revalidated Recency, Frequency, and engagement metrics
+3. Feature & Target Standardization
+Standardized churn into binary format for modeling
+Corrected misclassified categories and loyalty indicators
+4. Revenue & Value Construction
+Created revenue and monetary features
+Enabled CLV and value-based analysis
+5. Model Readiness
+Encoded categorical and demographic variables
+Final validation to ensure EDA- and ML-ready data
+
+**Analysis**
+<img width="480" height="283" alt="image" src="https://github.com/user-attachments/assets/0004ce0c-7f25-47be-bebb-4264460933a1" />
+
+Customer behavior shows high variability, particularly in price, price per item, loyalty points, and days since last order, indicating a heterogeneous customer base that cannot be effectively explained by a single average.
+
+Revenue-related variables (price, price per item) exhibit right-skewed distributions with many outliers, suggesting that a small proportion of customers generates a disproportionately large share of revenue (80/20 pattern).
+
+Order frequency has a low median, indicating that most customers do not purchase regularly.
+
+Days since last order is widely distributed with a relatively high median, reflecting an overall high churn risk.
+
+Loyalty points show high variance, highlighting clear differences in customer engagement and loyalty levels.
+
+Ratings are highly concentrated with low variance, suggesting limited explanatory and predictive power for churn compared to behavioral variables
+
+
+
+
+
+
 
 
 
