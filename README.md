@@ -25,7 +25,8 @@
 
 **- ภาพรวมชุดข้อมูล**
 
-
+** แหล่งที่มาของข้อมูล **  
+https://www.kaggle.com/datasets/nabihazahid/foodpanda-analysis-dataset-2025
 **จำนวนข้อมูล: 6,000 ออเดอร์**
 
 
