@@ -1,4 +1,24 @@
-# DS512-DS513
+##The Detail
+Food Panda Data Set 
+Link : https://www.kaggle.com/datasets/nabihazahid/foodpanda-analysis-dataset-2025
+
+The Detail
+This dataset contains customer-level transactional and behavioral data from a food delivery platform.Each record represents one customer, summarized from their historical order activity.
+
+This Data Captures
+- Purchasing behavior (price, quantity, order frequency)
+- Customer engagement over time (recency, tenure)
+- Loyalty and value indicators
+- Basic contextual attributes (payment method, city)
+
+The target variable, churn_flag, indicates whether a customer has become inactive. This dataset is used to analyze customer behavior, identify churn drivers, and build predictive churn models.
+
+##Executive Summary
+
+The analysis identifies customer churn driven primarily by declining engagement rather than pricing. Exploratory Data Analysis shows that Recency and Frequency are the strongest indicators of churn, while price per order has minimal impact. A Logistic Regression model is applied to predict churn, achieving high recall and effectively identifying at-risk customers. The outcome is a data-driven early warning system, integrating RFM analysis with predictive modeling, enabling prioritized retention actions and more sustainable churn reduction.
+
+EDA 
+
 
 **FoodPanda: วิเคราะห์ข้อมูลลูกค้า, Churn และการทำนายด้วย Machine Learning
 โปรเจกต์นี้เป็นงาน Exploratory Data Analysis (EDA) + Statistical Testing + Machine Learning
