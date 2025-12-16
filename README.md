@@ -1,4 +1,4 @@
-**The Detail**
+# The Detail
 
 Food Panda Data Set from Pakistan
 Link : https://www.kaggle.com/datasets/nabihazahid/foodpanda-analysis-dataset-2025
@@ -15,12 +15,12 @@ This Data Captures
 
 The target variable, churn_flag, indicates whether a customer has become inactive. This dataset is used to analyze customer behavior, identify churn drivers, and build predictive churn models.
 
-**Executive Summary**
+# Executive Summary
 
 The analysis identifies customer churn driven primarily by declining engagement rather than pricing. Exploratory Data Analysis shows that Recency and Frequency are the strongest indicators of churn, while price per order has minimal impact.The outcome is a data-driven early warning system, integrating RFM analysis with predictive modeling, enabling prioritized retention actions and more sustainable churn reduction.
 
 
-**The Purpose**
+# The Purpose
 
 Key Objectives
 
@@ -40,29 +40,29 @@ Value Proposition
 These insights enable the business to act earlier, target smarter, and grow revenue sustainably through data-driven customer decisions.
 
 
-**Data Dictionary**
+# Data Dictionary
 
 <img width="529" height="530" alt="image" src="https://github.com/user-attachments/assets/2b07be73-beff-4fbb-8c3e-91d7c7783b34" />
 
 Link https://docs.google.com/spreadsheets/d/1srnmpO-yM5rV1-iT0rWhTP16h0Qvr0ruV2nE_0aN3jc/edit?usp=sharing
 
-**The questions** 
+# The questions 
 
 <img width="719" height="270" alt="image" src="https://github.com/user-attachments/assets/21e0ccb9-8d29-40e4-9e35-79a93662b0ab" />
 
-**Exploratory Data Analysis**
+# Exploratory Data Analysis
 <img width="833" height="434" alt="image" src="https://github.com/user-attachments/assets/4e605035-1046-4f5b-bc12-848ca795fc09" />
 
 (The above visualization is selected for this topic analysis)
 
-**Key Findings**
+# Key Findings
 
 - **High Churn Risk**: Churn rate is as high as 46%, indicating that nearly half of customers leave the platform, directly impacting revenue and business stability.
 - **Loss of High-Value Customers**: Churned customers have a higher AOV than active customers (805 vs 797), showing that the business is losing high-value (VIP) customers, not low-quality ones.
 - **Weakening Key Revenue Markets**: High-income cities such as Multan and Lahore experience churn rates above 47%, signaling revenue risk in strategic geographic markets.
 - **Behavioral Decline Before Churn**: Churned customers exhibit lower purchase frequency, higher days since last order, and longer tenure, confirming that churn is preceded by a gradual decline in engagement rather than sudden exit.
 
-**Hypothesis:**
+# Hypothesis
 
 H₀ (Null Hypothesis):
 Customer churn rate has no significant relationship with the business’s total revenue.
@@ -71,7 +71,7 @@ H₁ (Alternative Hypothesis):
 Customer churn rate has a significant relationship with the business’s total revenue,
 such that an increase in churn leads to a decrease in total revenue.
 
-**Cleaning Data**
+# Cleaning Data
 
 1. Data Quality & Integrity
 Assessed completeness, logical consistency, and duplicates
@@ -89,7 +89,9 @@ Enabled CLV and value-based analysis
 Encoded categorical and demographic variables
 Final validation to ensure EDA- and ML-ready data
 
-**Analysis**
+# Analysis
+
+**Box Plot Distribution**
 
 <img width="480" height="283" alt="image" src="https://github.com/user-attachments/assets/0004ce0c-7f25-47be-bebb-4264460933a1" />
 
@@ -102,176 +104,172 @@ Next Step
 - RFM analysis is the necessary next step to convert exploratory behavioral insights into structured, business-interpretable customer segments.
 
 
+**Box Plot Churn and Active**
 
+<img width="406" height="293" alt="image" src="https://github.com/user-attachments/assets/992c1293-0007-47a1-b9ba-3eada72dd913" />
 
+The price distribution between Active and Inactive customers is highly similar.
+- The median price of both groups is nearly the same.
+- The interquartile range (IQR) and maximum values largely overlap across the two groups.
 
-**FoodPanda: วิเคราะห์ข้อมูลลูกค้า, Churn และการทำนายด้วย Machine Learning
-โปรเจกต์นี้เป็นงาน Exploratory Data Analysis (EDA) + Statistical Testing + Machine Learning
- โดยใช้ข้อมูลแพลตฟอร์ม Food Delivery (FoodPanda-like dataset) เพื่อศึกษาพฤติกรรมลูกค้า
- วิเคราะห์ปัจจัยที่ส่งผลต่อ Churn (การเลิกใช้งาน) และสร้างโมเดลทำนาย**
+Insight
+- Order price is not a key driver of churn.
+- Customers who churn do not exhibit a clearly lower spend per order compared to active customers.
 
- 
-**- วัตถุประสงค์ของโครงงาน**
-วิเคราะห์รูปแบบการใช้จ่ายและพฤติกรรมการสั่งอาหาร
+**Correlation Matrix**
 
+<img width="359" height="322" alt="image" src="https://github.com/user-attachments/assets/d8979baf-de4b-4c1f-92fd-b407de3031dd" />
 
-เปรียบเทียบความแตกต่างระหว่างลูกค้า Active vs Inactive (Churn)
+Correlation Heatmap (Numeric Features)
+- Most numeric variables show correlations close to zero.
+- Quantity and price per item exhibit a strong negative correlation (≈ -0.66).
+-Price and price per item show a moderate positive correlation (≈ 0.58).
+- Churn-related variables (order_frequency, days_since_last_order, loyalty_points) show no clear linear relationship with revenue-related variables.
 
+Insight
+- Purchasing behavior is complex and non-linear.
+- Customers who order larger quantities tend to choose lower-priced items per unit.
+- Spend per order is not a primary driver of churn.
+- Churn is better explained by temporal and frequency-based behaviors (recency, frequency, engagement) rather than revenue alone.
 
-ทดสอบสมมติฐานเชิงสถิติ (T-test)
+**Hypothesis Testing: Active vs. Inactive Customers**
 
+<img width="438" height="293" alt="image" src="https://github.com/user-attachments/assets/95d23cec-6708-4240-a527-ea083d9cc99d" />
 
-คัดเลือก Feature สำคัญที่สัมพันธ์กับ Churn
+Test
+An independent two-sample, two-tailed t-test was performed to compare the mean sales value (price) between Active and Inactive customers.
 
+H₀ (Null Hypothesis):
+The average sales of Active and Inactive customers are equal.
+H₁ (Alternative Hypothesis):
+The average sales of Active and Inactive customers are different.
 
-สร้างโมเดล Logistic Regression  ,Random Forest ,XGBoost,LightGBM  เพื่อทำนายโอกาส Churn
+- Significance Level (α): 0.05
 
+**Results**
+- T-statistic: -0.7969
+- P-value: 0.4255
 
+## Conclusion
 
-**- ภาพรวมชุดข้อมูล**
+Since p-value > 0.05, **we fail to reject H₀.**
 
-** แหล่งที่มาของข้อมูล **  
-https://www.kaggle.com/datasets/nabihazahid/foodpanda-analysis-dataset-2025
+There is no statistically significant difference in average sales between Active and Inactive customers.
+This suggests that churn is not driven by order value, but is more likely explained by behavioral factors such as recency, frequency, and engagement.
 
 
-**จำนวนข้อมูล: 6,000 ออเดอร์**
+# Consolidate Insight
 
+Shift from price-based tactics to behavior-driven retention.
+Focus on recency, frequency, and engagement, not discounts.
 
-**จำนวนตัวแปร: 20 ตัวแปร**
-<img width="1171" height="605" alt="image" src="https://github.com/user-attachments/assets/88460a82-6148-4d8f-9db3-4a4a35cf1199" />
+**Churn Drivers**
 
+1. Price per unit  is not the main cause of churn. customers who churn do not necessarily spend less per order than active customers.Therefore Price discounting is not a sustainable churn solution.
 
+2. Churn is a behavioral problem, not a revenue problem. Customers churn primarily due to declining engagement and purchase activity, not low spend.
 
+**Key Metrics: Recency & Frequency**
 
-**ตัวแปรสำคัญ**
+1. Recency & Frequency are critical signals
+   Longer time since last purchase and lower purchase frequency are stronger churn indicators than total spend or order value.
 
+**Customer Segmentation for Action**
 
-ราคา (price), จำนวน (quantity)
+1.About to Sleep / At-Risk
 
+= High churn risk → requires immediate reactivation actions.
 
-ความถี่การสั่ง (order_frequency)
+2. Potential / Need Attention
 
+= Still valuable → high return on retention investment.
 
-คะแนนสะสม (loyalty_points)
+**Strategic Approach**
 
+Use an RFM system as an early-warning mechanism
+to prioritize:
 
-ระยะห่างจากการสั่งล่าสุด (days_since_last_order)
+Retention campaigns
 
+Win-back campaigns
 
-สถานะลูกค้า (churned: Active / Inactive)
+Avoid mass discounting as a default strategy.
 
+# RFM Model Analysis 
 
-คะแนนรีวิว (rating)
+<img width="990" height="353" alt="image" src="https://github.com/user-attachments/assets/400c09d5-68df-4e11-b8bd-7dd393002245" />
+Key Finding
 
+| Area | Data Observation | Business Insight | Decision / Action |
+|------|------------------|------------------|-------------------|
+| Customer Base | Most customers fall into Champion, Loyal, and Potential segments | The customer base remains valuable; churn is not widespread | Prioritize retaining existing customers |
+| Churn Risk | About to Sleep and At-Risk segments show high recency and low frequency | Churn is driven by purchase inactivity, not order value | Focus on retention and win-back campaigns |
+| Value Driver | No significant difference in monetary value per order | Price is not a primary churn driver | Reduce reliance on discount-led strategies |
+| Behavior Signal | Recency and frequency clearly separate churn groups | Time-based behavior predicts churn effectively | Use RFM as an early-warning system |
+| Resource Allocation | Potential / Need Attention customers still have high value | This segment offers the highest ROI for intervention | Prioritize campaigns for this group first |
 
-สถานะการจัดส่ง (delivery_status)
 
+---
 
+# Answering Our Questions: From Behavior to Business Impact
 
-** การตรวจสอบและทำความสะอาดข้อมูล**
 
+## 1. How does customer purchasing behavior evolve before churn?
 
-ตรวจสอบชนิดข้อมูลและค่า missing (ไม่พบ missing values)
+Customer churn is preceded by **progressive disengagement**, not an abrupt revenue drop.  
+Customers show **lower purchase frequency** and **longer time since last order (high recency)** well before becoming inactive, while spend per order remains relatively stable.
 
+**Key Insight:**  
+Churn develops over time through declining engagement, making it **predictable in advance**.
 
-จัดการค่า Null
 
+## 2. Which factors drive churn: behavior vs. price?
+Statistical validation (two-sample t-test, distribution overlap, correlation analysis) confirms that **order value and price-related metrics do not differ significantly** between Active and Inactive customers.  
+In contrast, **recency and frequency strongly differentiate churn states**.
 
-ลบ duplicates
+**Driver Hierarchy:**
+- **Primary:** Time-based and engagement behaviors  
+- **Secondary / Weak:** Monetary value and price
 
+**Key Insight:**  
+Churn is a **behavioral phenomenon**, not a pricing problem.
 
-แปลงประเภทข้อมูล (date → datetime, string → numeric)
 
 
-เตรียมข้อมูลให้อยู่ในรูปแบบพร้อมวิเคราะห์และทำโมเดล
+## 3. Which customer features consistently separate churned customers?
+The most robust churn indicators across segmentation and heatmaps are:
+- **Recency** (time since last purchase)
+- **Frequency** (purchase regularity)
+- **Loyalty engagement signals**
 
+Monetary metrics show high variance and strong overlap between churned and active customers, limiting their diagnostic value.
 
+**Key Insight:**  
+Reliable churn differentiation requires **behavioral and temporal features**, not average spend.
 
-**Descriptive Statistics**
 
-**ผลสถิติพื้นฐานของตัวแปรเชิงตัวเลข: **
+## 4. How can churn be predicted early and reliably?
+An **RFM-based early warning system** identifies customers moving into **About to Sleep** and **At-Risk** segments before revenue loss occurs.  
+This behavior-first approach reduces missed high-risk customers and supports more effective predictive modeling.
 
-<img width="359" height="290" alt="{BE2B4D9B-3322-4F92-96AA-A8E6BC66FA5F}" src="https://github.com/user-attachments/assets/aebc4cbd-a0d0-49d8-97c1-eb620aeae2d2" />
+**Key Insight:**  
+Early churn prediction depends on **when and how customers disengage**, not how much they spend.
 
 
-จากการวิเคราะห์สถิติเชิงพรรณนา พบว่าลูกค้าส่วนใหญ่มักสั่งอาหารเฉลี่ยประมาณ 3 รายการต่อออเดอร์ โดยมีมูลค่าเฉลี่ยประมาณ 800 บาท
-ข้อมูลแสดงให้เห็นความแตกต่างของพฤติกรรมการใช้จ่าย และพบว่าตัวแปร days_since_last_order มีค่าเฉลี่ยสูง ซึ่งสะท้อนถึงความเสี่ยงในการเกิด churn
 
-มีการแสดง:
-Histogram
+## 5. How should churn insights be applied to business decisions?
+Churn analytics should be operationalized through **value-aware prioritization**:
+- Protect **Champions and Loyal** customers via retention programs  
+- Prioritize **Potential / Need Attention** segments for highest ROI  
+- Apply targeted **Win-back** strategies to At-Risk customers  
+- **Avoid mass discounting**, which treats symptoms rather than causes  
 
+This enables efficient budget allocation and sustainable churn reduction.
 
-Bar chart (Rating)
+---
 
-
-Boxplot เพื่อตรวจสอบ outliers
-
-
-
-🔗 Correlation Analysis
-วิเคราะห์ความสัมพันธ์ของตัวแปรเชิงตัวเลขด้วย Correlation Matrix
-
-
-แสดงผลด้วย Heatmap  จำนวนลูกค้าในแต่ละกลุ่ม Customer
-
-<img width="855" height="447" alt="{EDAD1F67-2F1C-4635-A0FE-B46BFE1EFBF5}" src="https://github.com/user-attachments/assets/92c81b7a-9030-426c-b8d9-d9cd20f092c4" />
-<img width="390" height="355" alt="image" src="https://github.com/user-attachments/assets/4df5063f-cc93-4943-91e1-bee539f2bd2a" />
-
-
-การแสดงยอดการ Churn แยกตามปี
-
-<img width="331" height="506" alt="{645E33D3-8686-43CE-9A41-A32C1CE4FDA9}" src="https://github.com/user-attachments/assets/dedef551-9e12-4910-8ace-dd1eb39dc9ec" />
-
-Royalty Point Vs Churn 
-
-<img width="312" height="359" alt="image" src="https://github.com/user-attachments/assets/7bb42336-dcfc-462a-9dc9-61729f634f43" />
-
-จากการวิเคราะห์ Loyalty Points พบว่า Active และ Inactive มีค่าเฉลี่ยใกล้เคียงกันมาก
-(249 vs 251) แสดงว่า Loyalty Points ไม่ได้มีความสัมพันธ์ชัดเจนกับการ Churn
-จึงไม่ใช่ปัจจัยสำคัญในการตัดสินว่าลูกค้าจะเลิกใช้บริการหรือไม่
-
-
-<img width="1652" height="423" alt="image" src="https://github.com/user-attachments/assets/bcc7942a-17fd-4630-80a5-b57c617a420b" />
-
-1️⃣ Average Loyalty
-
-Inactive สูงกว่า Active (≈ 251 vs 249)
-👉 แปลว่า ลูกค้าที่ churn ไม่ได้เป็นลูกค้าใหม่ แต่เป็นลูกค้าที่เคยอยู่กับบริษัทมานาน
-⇒ เสียลูกค้าเก่าที่มีคุณค่า
-
-2️⃣ Average Order Frequency
-
-Active สั่งซื้อบ่อยกว่า Inactive (≈ 25.36 vs 25.24)
-👉 ลูกค้าที่ไม่ churn ยังมี engagement ต่อเนื่อง
-⇒ ความถี่ในการสั่งซื้อเป็นตัวแยก churn ได้ดี
-
-3️⃣ Average Days Since Last Order
-
-Inactive เว้นช่วงนานกว่ามาก (≈ 197 วัน vs 169 วัน)
-👉 ลูกค้าที่ churn เริ่มหายไปก่อนแล้ว (early warning signal)
-⇒ ระยะเวลาตั้งแต่การสั่งซื้อล่าสุดเป็นตัวชี้ churn ที่ชัดเจน
-
-4️⃣ Tenure (รวม)
-
-Inactive มี tenure รวมสูงกว่าอย่างชัดเจน
-👉 ลูกค้าที่ churn เป็นกลุ่มที่อยู่กับบริษัทมานาน
-⇒ Churn ส่งผลกระทบต่อฐานรายได้ระยะยาว
-
-📌 Insight เชิงธุรกิจ (ตอบโจทย์ “Churn มีผลต่อยอดขายหรือไม่?”)
-
-Churn ไม่ได้เกิดจากลูกค้าใหม่ แต่เกิดจาก ลูกค้าเก่าที่เคยมีคุณค่า
-
-ลูกค้าที่ churn:
-
-สั่งซื้อน้อยลง
-
-ห่างหายจากการสั่งซื้อนานขึ้น
-
-⇒ ส่งผลให้ ยอดขายในอนาคตลดลงอย่างมีนัยสำคัญ
-
-
-**สรุปผล fail to reject the hypothesis**
-
-p-value = 0.43 (> 0.05)
+## Executive Takeaway
+**Churn is a behavioral, time-dependent problem—not a pricing problem.**  
+Sustainable retention requires **early detection through recency and frequency signals**, combined with **value-based prioritization**, rather than revenue-driven or discount-led tactics.
 
 
