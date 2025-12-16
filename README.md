@@ -267,9 +267,3 @@ Churn analytics should be operationalized through **value-aware prioritization**
 This enables efficient budget allocation and sustainable churn reduction.
 
 ---
-
-## Executive Takeaway
-**Churn is a behavioral, time-dependent problem—not a pricing problem.**  
-Sustainable retention requires **early detection through recency and frequency signals**, combined with **value-based prioritization**, rather than revenue-driven or discount-led tactics.
-
-
